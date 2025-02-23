@@ -1,39 +1,13 @@
 package ru.netology.creditapplicationservice.event;
 
-import java.io.Serializable;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-public class CreditDecisionEvent implements Serializable {
-    private Long id;
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class CreditDecisionEvent {
+    private Long applicationId;
     private boolean approved;
-
-    public CreditDecisionEvent() {}
-
-    public CreditDecisionEvent(Long id, boolean approved) {
-        this.id = id;
-        this.approved = approved;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public boolean isApproved() {
-        return approved;
-    }
-
-    public void setApproved(boolean approved) {
-        this.approved = approved;
-    }
-
-    @Override
-    public String toString() {
-        return "CreditDecisionEvent{" +
-                "id=" + id +
-                ", approved=" + approved +
-                '}';
-    }
 }

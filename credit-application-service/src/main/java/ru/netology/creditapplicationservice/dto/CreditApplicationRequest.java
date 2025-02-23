@@ -1,4 +1,4 @@
-package ru.netology.creditapplicationservice.event;
+package ru.netology.creditapplicationservice.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,8 +9,7 @@ import java.math.BigDecimal;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class CreditApplicationEvent {
-    private Long applicationId;
+public class CreditApplicationRequest {
     private BigDecimal amount;
     private Integer term;
     private BigDecimal income;

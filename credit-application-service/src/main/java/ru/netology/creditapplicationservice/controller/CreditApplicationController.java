@@ -1,45 +1,27 @@
 package ru.netology.creditapplicationservice.controller;
 
-
-
-import org.springframework.kafka.core.KafkaTemplate;
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
-import ru.netology.creditapplicationservice.event.CreditApplication;
-import ru.netology.creditapplicationservice.event.CreditApplicationEvent;
-import ru.netology.creditapplicationservice.event.CreditStatus;
-import ru.netology.creditapplicationservice.repository.CreditApplicationRepository;
-
-import java.util.Optional;
+import ru.netology.creditapplicationservice.dto.CreditApplicationRequest;
+import ru.netology.creditapplicationservice.dto.CreditApplicationResponse;
+import ru.netology.creditapplicationservice.model.ApplicationStatus;
+import ru.netology.creditapplicationservice.service.CreditApplicationService;
 
 @RestController
-@RequestMapping("/api/credits")
+@RequestMapping("/api/credit-applications")
+@RequiredArgsConstructor
 public class CreditApplicationController {
-
-    private final CreditApplicationRepository repository;
-    private final KafkaTemplate<String, CreditApplicationEvent> kafkaTemplate;
-
-    public CreditApplicationController(CreditApplicationRepository repository, KafkaTemplate<String, CreditApplicationEvent> kafkaTemplate) {
-        this.repository = repository;
-        this.kafkaTemplate = kafkaTemplate;
-    }
+    private final CreditApplicationService service;
 
     @PostMapping
-    public Long createCreditApplication(@RequestBody CreditApplication application) {
-        application.setStatus(CreditStatus.IN_PROGRESS);
-        repository.save(application);
-
-        // Отправляем заявку в Kafka
-        CreditApplicationEvent event = new CreditApplicationEvent(application.getId(),
-                application.getAmount(), application.getTerm(), application.getIncome(),
-                application.getCreditLoad(), application.getCreditScore());
-
-        kafkaTemplate.send("credit-application-topic", event);
-
-        return application.getId();
+    public CreditApplicationResponse createApplication(@RequestBody CreditApplicationRequest request) {
+        Long id = service.createApplication(request);
+        return new CreditApplicationResponse(id);
     }
 
-    @GetMapping("/{id}")
-    public Optional<CreditApplication> getCreditStatus(@PathVariable Long id) {
-        return repository.findById(id);
+    @GetMapping("/{id}/status")
+    public ApplicationStatus getApplicationStatus(@PathVariable Long id) {
+        return service.getApplicationStatus(id);
     }
 }
+
