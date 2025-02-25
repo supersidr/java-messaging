@@ -1,4 +1,4 @@
-package ru.netology.creditprocessingservice.config;
+package ru.netology.creditapplicationservice.config;
 
 import org.springframework.amqp.core.Queue;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;

@@ -4,18 +4,92 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5332e00-0f4f-4fe0-a2c5-b67129456b5d" name="Changes" comment="" />
+    <list default="true" id="c5332e00-0f4f-4fe0-a2c5-b67129456b5d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/credit-application-service/src/main/java/ru/netology/creditapplicationservice/config/KafkaConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/credit-application-service/src/main/java/ru/netology/creditapplicationservice/config/RabbitMQConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/credit-application-service/src/main/java/ru/netology/creditapplicationservice/dto/CreditApplicationListResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/credit-applications.http" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/credit-processing-service/src/main/java/ru/netology/creditprocessingservice/config/KafkaConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/credit-processing-service/src/main/java/ru/netology/creditprocessingservice/service/CreditProcessingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/credit-processing-service/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle.build" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/credit-application-service/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/credit-application-service/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/credit-application-service/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/credit-application-service/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/credit-application-service/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/credit-application-service/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/credit-application-service/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/credit-application-service/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/credit-application-service/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/credit-application-service/src/main/java/ru/netology/creditapplicationservice/controller/CreditApplicationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/credit-application-service/src/main/java/ru/netology/creditapplicationservice/controller/CreditApplicationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/credit-application-service/src/main/java/ru/netology/creditapplicationservice/event/CreditApplicationEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/credit-application-service/src/main/java/ru/netology/creditapplicationservice/event/CreditApplicationEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/credit-application-service/src/main/java/ru/netology/creditapplicationservice/service/CreditApplicationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/credit-application-service/src/main/java/ru/netology/creditapplicationservice/service/CreditApplicationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/credit-application-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/credit-application-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/credit-processing-service/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/credit-processing-service/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/credit-processing-service/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/credit-processing-service/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/credit-processing-service/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/credit-processing-service/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/credit-processing-service/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/credit-processing-service/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/credit-processing-service/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/credit-processing-service/src/main/java/ru/netology/creditprocessingservice/config/RabbitMQConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/credit-processing-service/src/main/java/ru/netology/creditprocessingservice/config/RabbitMQConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/credit-processing-service/src/main/java/ru/netology/creditprocessingservice/event/CreditApplicationEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/credit-processing-service/src/main/java/ru/netology/creditprocessingservice/event/CreditApplicationEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/credit-processing-service/src/main/java/ru/netology/creditprocessingservice/event/CreditDecisionEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/credit-processing-service/src/main/java/ru/netology/creditprocessingservice/event/CreditDecisionEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/credit-processing-service/src/main/java/ru/netology/creditprocessingservice/service/KafkaConsumerService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/credit-processing-service/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="credit-processing-service" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="credit-processing-service" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="credit-processing-service" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build setup" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2t2cTTCjN9vSQ0YR0Ipoob94wNi" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -23,9 +97,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Gradle.java-messaging [init].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "fix",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/igor/PROJECTS/java-messaging",
     "node.js.detected.package.eslint": "true",
@@ -33,14 +108,52 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="java-messaging [init]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="init" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.java-messaging [init]" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.23654.189" />
-        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-IU-243.23654.189" />
+        <option value="bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.24978.46" />
+        <option value="bundled-js-predefined-d6986cc7102b-76f8388c3a79-JavaScript-IU-243.24978.46" />
       </set>
     </attachedChunks>
   </component>
@@ -53,6 +166,9 @@
       <option name="presentableId" value="Default" />
       <updated>1739553617615</updated>
       <workItem from="1739553618888" duration="646000" />
+      <workItem from="1740256714519" duration="1821000" />
+      <workItem from="1740302467635" duration="455000" />
+      <workItem from="1740500558683" duration="1281000" />
     </task>
     <servers />
   </component>
