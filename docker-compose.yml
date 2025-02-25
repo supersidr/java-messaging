@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   postgres:
-    image: postgres:15
+    image: postgres:15.5
     environment:
       POSTGRES_DB: creditapp
       POSTGRES_USER: postgres
@@ -40,25 +40,25 @@ services:
       - "5672:5672"
       - "15672:15672"
 
-  credit-application-service:
-    build: ./credit-application-service
-    depends_on:
-      - postgres
-      - kafka
-      - rabbitmq
-    environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/creditapp
-      SPRING_KAFKA_BOOTSTRAP_SERVERS: kafka:29092
-      SPRING_RABBITMQ_HOST: rabbitmq
+  # credit-application-service:
+  #   build: ./credit-application-service
+  #   depends_on:
+  #     - postgres
+  #     - kafka
+  #     - rabbitmq
+  #   environment:
+  #     SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/creditapp
+  #     SPRING_KAFKA_BOOTSTRAP_SERVERS: kafka:29092
+  #     SPRING_RABBITMQ_HOST: rabbitmq
 
-  credit-processing-service:
-    build: ./credit-processing-service
-    depends_on:
-      - kafka
-      - rabbitmq
-    environment:
-      SPRING_KAFKA_BOOTSTRAP_SERVERS: kafka:29092
-      SPRING_RABBITMQ_HOST: rabbitmq
+  # credit-processing-service:
+  #   build: ./credit-processing-service
+  #   depends_on:
+  #     - kafka
+  #     - rabbitmq
+  #   environment:
+  #     SPRING_KAFKA_BOOTSTRAP_SERVERS: kafka:29092
+  #     SPRING_RABBITMQ_HOST: rabbitmq
 
 volumes:
   postgres_data:

@@ -1,0 +1,26 @@
+### Create credit application
+POST http://localhost:8080/api/credit-applications
+Content-Type: application/json
+
+{
+  "amount": 100000,
+  "term": 12,
+  "income": 50000,
+  "currentCreditLoad": 10000,
+  "creditRating": 750
+}
+
+> {%
+    client.test("Request executed successfully", function() {
+        client.assert(response.status === 200, "Response status is not 200");
+    });
+    client.test("Response has ID", function() {
+        client.assert(response.body.id !== null, "ID should not be null");
+    });
+%}
+
+### Get all applications
+GET http://localhost:8080/api/credit-applications
+
+### Get specific application status
+GET http://localhost:8080/api/credit-applications/6/status

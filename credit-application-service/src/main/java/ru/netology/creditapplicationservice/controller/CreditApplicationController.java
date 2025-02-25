@@ -2,10 +2,13 @@ package ru.netology.creditapplicationservice.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
+import ru.netology.creditapplicationservice.dto.CreditApplicationListResponse;
 import ru.netology.creditapplicationservice.dto.CreditApplicationRequest;
 import ru.netology.creditapplicationservice.dto.CreditApplicationResponse;
 import ru.netology.creditapplicationservice.model.ApplicationStatus;
 import ru.netology.creditapplicationservice.service.CreditApplicationService;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/credit-applications")
@@ -22,6 +25,11 @@ public class CreditApplicationController {
     @GetMapping("/{id}/status")
     public ApplicationStatus getApplicationStatus(@PathVariable Long id) {
         return service.getApplicationStatus(id);
+    }
+
+    @GetMapping
+    public List<CreditApplicationListResponse> getAllApplications() {
+        return service.getAllApplications();
     }
 }
 

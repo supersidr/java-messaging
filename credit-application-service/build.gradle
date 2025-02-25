@@ -14,6 +14,7 @@ java {
 }
 
 repositories {
+	mavenLocal()
 	mavenCentral()
 }
 
@@ -23,6 +24,8 @@ dependencies {
 	implementation 'org.springframework.kafka:spring-kafka'
 	implementation 'org.springframework.boot:spring-boot-starter-amqp'
 	implementation 'org.flywaydb:flyway-core'
+	runtimeOnly group: 'org.flywaydb', name: 'flyway-database-postgresql', version: '10.20.1'
+
 	implementation 'org.postgresql:postgresql'
 	implementation 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'

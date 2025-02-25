@@ -7,12 +7,16 @@ import org.springframework.http.HttpStatus;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
+import ru.netology.creditapplicationservice.dto.CreditApplicationListResponse;
 import ru.netology.creditapplicationservice.dto.CreditApplicationRequest;
 import ru.netology.creditapplicationservice.entity.CreditApplication;
 import ru.netology.creditapplicationservice.event.CreditApplicationEvent;
 import ru.netology.creditapplicationservice.event.CreditDecisionEvent;
 import ru.netology.creditapplicationservice.model.ApplicationStatus;
 import ru.netology.creditapplicationservice.repository.CreditApplicationRepository;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -52,5 +56,19 @@ public class CreditApplicationService {
                             ApplicationStatus.APPROVED : ApplicationStatus.REJECTED);
                     repository.save(application);
                 });
+    }
+
+    public List<CreditApplicationListResponse> getAllApplications() {
+        return repository.findAll().stream()
+                .map(app -> new CreditApplicationListResponse(
+                        app.getId(),
+                        app.getAmount(),
+                        app.getTerm(),
+                        app.getIncome(),
+                        app.getCurrentCreditLoad(),
+                        app.getCreditRating(),
+                        app.getStatus()
+                ))
+                .collect(Collectors.toList());
     }
 }
